@@ -41,5 +41,3 @@ foreach ($products as $p) {
     </div>
     <?php endif; ?>
 </div>
-
-<?php include 'includes/footer.php'; ?>
