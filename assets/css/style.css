@@ -166,23 +166,18 @@
   
 
   .product-excerpt{
-    font-family: 'Open Sans', 'Roboto', Arial, sans-serif; 
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
     font-size: 13px;
     line-height: 18px;
     color: #686868;
-    letter-spacing: 0;
   
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    line-clamp: 7;
-    -webkit-line-clamp: 7;
-  
-    overflow: hidden;
-    text-overflow: ellipsis;
+    display: block;
+    overflow: visible;
   }
   
   
-  /* BUTTON BASE */
+  
+  
 .btn{
     display: inline-flex;
     align-items: center;
@@ -199,10 +194,10 @@
     border: none;
     transition: all 0.2s ease;
   
-    gap: 10px; /* razmik med + in tekstom */
+    gap: 5px; 
   }
   
-  /* OUTLINE (Figma "inside" border look) */
+ 
   .btn-outline{
     background: transparent;
     color: #5EA0E0;
@@ -217,15 +212,15 @@
     color: #fff;
   }
   
-  /* FONT AWESOME PLUS */
-  .btn .btn-icon{  
-    font-weight: 900;   
-    font-size: 13px;
-    line-height: 18px;
-    color: currentColor;
+  
+  .btn .btn-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    color: currentColor;
+  }
+  .btn .btn-plus-icon {
+    flex-shrink: 0;
   }
  
   .product-content .btn{

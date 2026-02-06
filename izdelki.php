@@ -22,10 +22,26 @@ include 'includes/header.php';
           <h2 class="product-title"><?php echo htmlspecialchars($product['title']); ?></h2>
           <h3 class="product-subtitle"><?php echo htmlspecialchars($product['subtitle']); ?></h3>
 
-          <p class="product-excerpt"><?php echo htmlspecialchars($product['excerpt']); ?></p>
+          <div class="product-excerpt">
+            <?php
+              $paras = $product['excerpt_paragraphs'] ?? [];
+
+
+              foreach ($paras as $idx => $text):
+            ?>
+              <p>
+                <strong><?php echo $idx === 0 ? 'Odstavek 1:' : 'Odstavek 2:'; ?></strong>
+                <?php echo htmlspecialchars($text); ?>
+              </p>
+            <?php endforeach; ?>
+          </div>
 
           <a class="btn btn-outline" href="izdelek.php?id=<?php echo (int)$product['id']; ?>">
-            <i class="fa-solid fa-plus btn-icon" aria-hidden="true"></i>
+            <span class="btn-icon" aria-hidden="true">
+              <svg width="11" height="13" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" class="btn-plus-icon">
+                <path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </span>
             VEČ O <?php echo htmlspecialchars($product['title']); ?>
           </a>
         </div>
@@ -34,5 +50,3 @@ include 'includes/header.php';
     <?php endforeach; ?>
   </div>
 </div>
-
-
