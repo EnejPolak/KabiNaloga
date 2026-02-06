@@ -2,25 +2,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const cards = document.querySelectorAll(".product-card");
   
     cards.forEach((card) => {
-      const excerpt = card.querySelector(".product-excerpt");
-      const toggle = card.querySelector(".excerpt-toggle");
+      const excerpt = card.querySelector(".js-excerpt");
+      const btn = card.querySelector(".js-excerpt-toggle");
+      if (!excerpt || !btn) return;
   
-      if (!excerpt || !toggle) return;
+      const needsToggle = () => excerpt.scrollHeight > excerpt.clientHeight + 1;
   
-      const needsToggle = excerpt.scrollHeight > excerpt.clientHeight + 1;
+      const refresh = () => {
+        card.classList.remove("is-expanded");
+        btn.textContent = "Prikaži več";
+        btn.hidden = !needsToggle();
+      };
   
-      if (!needsToggle) {
-        toggle.style.display = "none";
-        return;
-      }
+      refresh();
   
-      toggle.addEventListener("click", (e) => {
-        e.preventDefault();
+      btn.addEventListener("click", () => {
+        const expanded = card.classList.toggle("is-expanded");
+        btn.textContent = expanded ? "Skrij" : "Prikaži več";
+      });
   
-        const isExpanded = card.classList.toggle("is-expanded");
-  
-        toggle.textContent = isExpanded ? "MANJ" : "VEČ";
-        toggle.setAttribute("aria-expanded", isExpanded ? "true" : "false");
+      window.addEventListener("resize", () => {
+        const expanded = card.classList.contains("is-expanded");
+        if (expanded) return;
+        btn.hidden = !needsToggle();
       });
     });
   });
