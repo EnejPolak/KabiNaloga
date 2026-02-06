@@ -10,8 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
-
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
@@ -19,7 +17,7 @@
     <div class="frame">
 
       <div class="logo">
-        <img src="assets/img/logo.png" alt="KABI Logo" width="139" height="60" />
+        <img src="assets/img/logo@2x.png" alt="KABI Logo" width="139" height="60" />
       </div>
 
       <nav class="navbar">

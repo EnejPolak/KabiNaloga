@@ -1,5 +1,8 @@
 *{margin:0;padding:0;box-sizing:border-box}
 
+html { scrollbar-gutter: stable; }
+
+
 body{
   font-family:"Open Sans",sans-serif;
   background:#EEF3F5;
@@ -56,6 +59,11 @@ body{
   display:flex;
   align-items:center;
   text-shadow:0 1px 0 rgba(0,0,0,0.30);
+}
+
+.nav-link.active{
+  color:#fff;
+  font-weight: 900;
 }
 
 .nav-home-icon{
@@ -248,6 +256,127 @@ body{
   padding-right:0;
 }
 
+
+.product-detail {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+
+  .product-detail-image {
+    width: 361px;
+    height: 203px;
+    flex: 0 0 361px;
+  
+    border-radius: 10px; 
+    overflow: hidden;
+  }
+  
+  .product-detail-image img.product-image-large {
+    width: 361px;
+    height: 203px;
+    display: block;
+    object-fit: cover;
+  
+    letter-spacing: 0; 
+    line-height: 0;    
+  }
+  
+
+  .product-detail-content {
+    margin-left: 30px;
+    margin-top: -7px;
+  }
+  
+ 
+  
+ 
+  .product-detail-title {
+    margin: 0;
+  
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 0;
+  
+    color: #262626;
+  }
+  
+  
+  .product-detail-subtitle {
+    margin: 0;
+  
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    letter-spacing: 0;
+  
+    color: #686868;
+  }
+  
+
+  .product-detail-body {
+    margin-top: 20px;
+  }
+  
+  
+  .product-detail-body p {
+    margin: 0 0 12px 0; 
+    max-width: 746px;   
+  
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0;
+  
+    color: #686868;
+  }
+  
+
+  .product-detail-body .odstavek-label {
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 18px;
+  }
+  
+ 
+  .btn-back {
+    margin-top: 30px;
+  
+    width: 197px;
+    height: 48px;
+  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+  
+    border: 2px solid #5EA0E0;
+    border-radius: 5px;
+    background: transparent;
+  
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 0;
+  
+    color: #5EA0E0;
+    text-decoration: none;
+  }
+  
+ 
+  .btn-back .btn-icon,
+  .btn-back i {
+    font-size: 13px;
+    line-height: 13px;
+    letter-spacing: 0;
+    color: #5EA0E0;
+  }
+  
 @media (max-width:1200px){
   .logo{left:20px;top:20px}
   .navbar{left:20px;width:calc(100% - 40px);top:100px}

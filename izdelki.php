@@ -9,13 +9,16 @@ include 'includes/header.php';
       <div class="product-card">
 
         <div class="product-image">
-          <div class="image-placeholder" aria-hidden="true">
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="24" height="24" rx="2" fill="#48C6EF"/>
-              <circle cx="9" cy="9" r="2" fill="white"/>
-              <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
+          <img
+            class="product-image-img"
+            src="assets/img/img.png"
+            srcset="assets/img/img.png 1x, assets/img/img@2x.png 2x"
+            width="360"
+            height="203"
+            alt=""
+            loading="lazy"
+            decoding="async"
+          >
         </div>
 
         <div class="product-content">
