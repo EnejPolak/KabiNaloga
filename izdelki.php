@@ -42,7 +42,7 @@ include 'includes/header.php';
                 <path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </span>
-            VEČ O <?php echo htmlspecialchars($product['title']); ?>
+            VEČ O <?php echo htmlspecialchars($product['btn']); ?>
           </a>
         </div>
 
