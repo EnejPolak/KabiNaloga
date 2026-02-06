@@ -22,19 +22,19 @@ include 'includes/header.php';
           <h2 class="product-title"><?php echo htmlspecialchars($product['title']); ?></h2>
           <h3 class="product-subtitle"><?php echo htmlspecialchars($product['subtitle']); ?></h3>
 
-          <div class="product-excerpt">
+          <div class="product-excerpt js-excerpt">
             <?php
               $paras = $product['excerpt_paragraphs'] ?? [];
-
-
               foreach ($paras as $idx => $text):
             ?>
               <p>
-                <strong><?php echo $idx === 0 ? 'Odstavek 1:' : 'Odstavek 2:'; ?></strong>
+                <span class="odstavek-label"><?php echo $idx === 0 ? 'Odstavek 1:' : 'Odstavek 2:'; ?></span>
                 <?php echo htmlspecialchars($text); ?>
               </p>
             <?php endforeach; ?>
           </div>
+
+          <button class="excerpt-toggle js-excerpt-toggle" type="button" hidden>Prikaži več</button>
 
           <a class="btn btn-outline" href="izdelek.php?id=<?php echo (int)$product['id']; ?>">
             <span class="btn-icon" aria-hidden="true">
@@ -50,3 +50,5 @@ include 'includes/header.php';
     <?php endforeach; ?>
   </div>
 </div>
+
+<script src="assets/js/excerpt-toggle.js"></script>
