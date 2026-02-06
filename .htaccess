@@ -1,0 +1,8 @@
+RewriteEngine On
+
+# Redirect root to izdelki.php
+RewriteRule ^$ izdelki.php [L]
+
+# Handle product URLs (optional clean URLs)
+RewriteRule ^izdelek/([0-9]+)$ izdelek.php?id=$1 [L]
+RewriteRule ^izdelki$ izdelki.php [L]
