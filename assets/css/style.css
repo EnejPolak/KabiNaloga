@@ -1,4 +1,4 @@
-/* /assets/css/style.css */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,6 +12,7 @@
     background-size: 12px 12px;
     color: #333;
     line-height: 1.6;
+    
   }
   
   .page-wrapper {
@@ -26,7 +27,7 @@
     min-height: 100vh;
   }
   
-  /* LOGO */
+ 
   .logo {
     position: absolute;
     top: 30px;
@@ -96,32 +97,31 @@
     min-height: calc(100vh - 200px);
   }
   
-  .container {
-    width: 1141px;
+  .container{
+    width: 1140px;       /* 360*3 + 30*2 */
     margin-left: 149px;
     padding: 0;
   }
   
-  /* GRID */
-  .products-grid {
+  
+ 
+  .products-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 360px);
     gap: 30px;
-    margin-bottom: 40px;
-    align-items: stretch;
   }
   
-  /* CARD */
+  
+  
   .product-card {
     background: #FFFFFF;
     border-radius: 5px;
     box-shadow: 0px 3px 10px 0px rgba(0,0,0,0.05);
     overflow: hidden;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-  
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 666px;
   }
   
   .product-card:hover {
@@ -143,71 +143,98 @@
   }
   
   .product-content {
-    padding: 30px 25px;
-  
+    padding: 19px 30px;
     display: flex;
     flex-direction: column;
     flex: 1;
   }
   
   .product-title {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
-    margin-bottom: 8px;
-    color: #333;
+    color: #262626;
   }
   
   .product-subtitle {
-    font-size: 16px;
-    font-weight: 500;
-    color: #666;
-    margin-bottom: 16px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #686868;
+    letter-spacing: 0;
+    margin-bottom: 20px;
   }
   
-  /* clamp -> dizajn ostane čist */
-  .product-excerpt {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 25px;
+
+  .product-excerpt{
+    font-family: 'Open Sans', 'Roboto', Arial, sans-serif; 
+    font-size: 13px;
+    line-height: 18px;
+    color: #686868;
+    letter-spacing: 0;
   
     display: -webkit-box;
     -webkit-box-orient: vertical;
+    line-clamp: 7;
     -webkit-line-clamp: 7;
+  
     overflow: hidden;
+    text-overflow: ellipsis;
   }
   
-  .btn {
-    display: inline-block;
-    padding: 12px 24px;
+  
+  /* BUTTON BASE */
+.btn{
+    display: inline-flex;
+    align-items: center;
+  
+    padding: 15px 30px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    transition: all 0.2s ease;
+  
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 700;
+  
     cursor: pointer;
     border: none;
+    transition: all 0.2s ease;
+  
+    gap: 10px; /* razmik med + in tekstom */
   }
   
-  /* gumb vedno spodaj */
-  .product-content .btn {
+  /* OUTLINE (Figma "inside" border look) */
+  .btn-outline{
+    background: transparent;
+    color: #5EA0E0;
+  
+    border: none;
+    outline: 2px solid #5EA0E0;
+    outline-offset: -2px;
+  }
+  
+  .btn-outline:hover{
+    background: #5EA0E0;
+    color: #fff;
+  }
+  
+  /* FONT AWESOME PLUS */
+  .btn .btn-icon{  
+    font-weight: 900;   
+    font-size: 13px;
+    line-height: 18px;
+    color: currentColor;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .product-content .btn{
     margin-top: auto;
     align-self: flex-start;
   }
   
-  .btn-outline {
-    border: 2px solid #48C6EF;
-    color: #48C6EF;
-    background: transparent;
-  }
   
-  .btn-outline:hover {
-    background: #48C6EF;
-    color: #fff;
-  }
   
-  /* RESPONSIVE */
   @media (max-width: 1200px) {
     .logo {
       left: 20px;
@@ -251,7 +278,7 @@
   
     .logo {
       left: 10px;
-      top: 15Kpx; /* če te moti, daj 15px */
+      top: 15px; 
     }
   
     .main-content {

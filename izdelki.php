@@ -1,4 +1,3 @@
-<!-- /izdelki.php -->
 <?php
 include 'includes/data.php';
 include 'includes/header.php';
@@ -25,9 +24,9 @@ include 'includes/header.php';
 
           <p class="product-excerpt"><?php echo htmlspecialchars($product['excerpt']); ?></p>
 
-          <a class="btn btn-outline"
-             href="izdelek.php?id=<?php echo (int)$product['id']; ?>">
-            + VEČ O <?php echo htmlspecialchars($product['title']); ?>
+          <a class="btn btn-outline" href="izdelek.php?id=<?php echo (int)$product['id']; ?>">
+            <i class="fa-solid fa-plus btn-icon" aria-hidden="true"></i>
+            VEČ O <?php echo htmlspecialchars($product['title']); ?>
           </a>
         </div>
 
@@ -35,3 +34,5 @@ include 'includes/header.php';
     <?php endforeach; ?>
   </div>
 </div>
+
+
