@@ -326,16 +326,17 @@ body{
   
   
   .product-detail-body p {
-    margin: 0 0 12px 0; 
     max-width: 746px;   
-  
     font-family: "Open Sans", sans-serif;
     font-weight: 400;
     font-size: 13px;
     line-height: 18px;
     letter-spacing: 0;
-  
     color: #686868;
+  }
+
+  .product-detail-body p + p {
+    margin-top: 18px; 
   }
   
 
