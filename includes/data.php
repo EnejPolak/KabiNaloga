@@ -12,10 +12,8 @@ $products = [];
 for ($i = 1; $i <= $count; $i++) {
 
   $paras = [];
-  // 1x Odstavek 1
   $paras[] = $paragraph1;
 
-  // i-krat Odstavek 2 (1.,2.,3.,...)
   for ($k = 1; $k <= $i; $k++) {
     $paras[] = $paragraph2;
   }
