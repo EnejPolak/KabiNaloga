@@ -1,4 +1,5 @@
 <?php
+include 'includes/helpers.php';
 include 'includes/data.php';
 
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
@@ -6,10 +7,6 @@ $product = null;
 
 foreach ($products as $p) {
   if ((int)($p['id'] ?? 0) === $id) { $product = $p; break; }
-}
-
-function e($v): string {
-  return htmlspecialchars((string)($v ?? ''), ENT_QUOTES, 'UTF-8');
 }
 
 include 'includes/header.php';
@@ -60,3 +57,4 @@ include 'includes/header.php';
   <?php endif; ?>
 </div>
 
+<?php include 'includes/footer.php'; ?>

@@ -1,4 +1,5 @@
 <?php
+include 'includes/helpers.php';
 include 'includes/data.php';
 include 'includes/header.php';
 ?>
@@ -21,8 +22,8 @@ include 'includes/header.php';
           </div>
 
         <div class="product-content">
-          <h2 class="product-title"><?php echo htmlspecialchars($product['title']); ?></h2>
-          <h3 class="product-subtitle"><?php echo htmlspecialchars($product['subtitle']); ?></h3>
+          <h2 class="product-title"><?php echo e($product['title']); ?></h2>
+          <h3 class="product-subtitle"><?php echo e($product['subtitle']); ?></h3>
 
           <div class="product-excerpt js-excerpt">
             <?php
@@ -31,7 +32,7 @@ include 'includes/header.php';
             ?>
               <p>
                 <span class="odstavek-label"><?php echo $idx === 0 ? 'Odstavek 1:' : 'Odstavek 2:'; ?></span>
-                <?php echo htmlspecialchars($text); ?>
+                <?php echo e($text); ?>
               </p>
             <?php endforeach; ?>
           </div>
@@ -44,7 +45,7 @@ include 'includes/header.php';
                 <path d="M6 2v8M2 6h8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
             </span>
-            VEČ O <?php echo htmlspecialchars($product['btn']); ?>
+            VEČ O <?php echo e($product['btn']); ?>
           </a>
         </div>
 
@@ -54,3 +55,5 @@ include 'includes/header.php';
 </div>
 
 <script src="assets/js/excerpt-toggle.js"></script>
+
+<?php include 'includes/footer.php'; ?>
