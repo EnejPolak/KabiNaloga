@@ -8,18 +8,17 @@ include 'includes/header.php';
     <?php foreach ($products as $product): ?>
       <div class="product-card">
 
-        <div class="product-image">
-          <img
-            class="product-image-img"
-            src="assets/img/img.png"
-            srcset="assets/img/img.png 1x, assets/img/img@2x.png 2x"
-            width="360"
-            height="203"
-            alt=""
-            loading="lazy"
-            decoding="async"
-          >
-        </div>
+          <div class="product-image">
+              <img
+                class="product-image-img"
+                src="assets/img/img@2x.png"
+                width="360"
+                height="203"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+          </div>
 
         <div class="product-content">
           <h2 class="product-title"><?php echo htmlspecialchars($product['title']); ?></h2>

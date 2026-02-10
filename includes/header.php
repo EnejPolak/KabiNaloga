@@ -21,6 +21,10 @@
         <img src="assets/img/logo@2x.png" alt="KABI Logo" width="139" height="60" />
       </div>
 
+
+
+      <div class="navbar-shadow" aria-hidden="true"></div>
+
       <nav class="navbar" id="navbar">
         <div class="nav-container">
           <div class="nav-links">
