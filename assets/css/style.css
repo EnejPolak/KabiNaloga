@@ -74,26 +74,38 @@ body.is-leaving {
 }
 
 .nav-link {
-  color: #fff;
-  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
   font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  line-height: 22px;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.30);
+  text-decoration: none;
   border-radius: 4px;
   transition: all 0.2s ease;
   display: flex;
   align-items: center;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.30);
 }
 
 .nav-link.active {
-  color: #fff;
-  font-weight: 900;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: #FFFFFF;
+  letter-spacing: 0;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.30);
 }
 
 .nav-home-icon {
   margin-right: 10px;
   margin-left: 19px;
+  font-family: FontAwesome;
+  font-size: 18px;
+  color: #FFFFFF;
   opacity: 0.24;
+  line-height: 18;
+  line-height: 1;
 }
 
 .nav-divider {
@@ -164,7 +176,7 @@ body.is-leaving {
 }
 
 .product-content {
-  padding: 19px 30px;
+  padding: 19px 30px 30px;
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
@@ -172,25 +184,28 @@ body.is-leaving {
 }
 
 .product-title {
-  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
   font-weight: 700;
-  text-transform: uppercase;
+  font-size: 24px;
   color: #262626;
   letter-spacing: 0;
   line-height: 33px;
+  text-transform: uppercase;
 }
 
 .product-subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   font-size: 20px;
-  font-weight: 200;
   color: #686868;
   letter-spacing: 0;
-  margin-bottom: 20px;
   line-height: 27px;
+  margin-bottom: 20px;
 }
 
 .product-excerpt {
-  font-family: "Open Sans", "Roboto", Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
   font-size: 13px;
   line-height: 18px;
   color: #686868;

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <script src="assets/js/page-transition.js" defer></script>
   <script src="assets/js/nav.js" defer></script>
@@ -26,9 +27,7 @@
       <nav class="navbar" id="navbar">
         <div class="nav-container">
           <a href="index.php" class="nav-link home-link">
-            <svg class="nav-home-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
-            </svg>
+            <i class="fa-solid fa-house-chimney nav-home-icon"></i>
             Domov
           </a>
 
