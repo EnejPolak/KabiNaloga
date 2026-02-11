@@ -315,6 +315,7 @@ body.is-leaving {
 .product-detail {
   display: flex;
   align-items: flex-start;
+  margin-top: -1px;
 }
 
 .product-detail-image {
